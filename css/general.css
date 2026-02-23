@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+/* Til at aligne cards ordenligt, dette er en styling */
+/* section{
+    display:grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 1rem;
+padding: 1rem;
+
+}
+
+article{
+display: grid;
+grid-template-rows: subgrid;
+grid-row: span 3;
+
+} */

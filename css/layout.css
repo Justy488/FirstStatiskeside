@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Courier New", Courier, monospace;
+  src: url();
+}
+@font-face {
+  font-family: "Brilant";
+  src: url();
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+
+  padding: 5px;
+  gap: 1rem;
+}
+
+.box-master {
+  display: grid;
+
+  background-color: #7a1027;
+  border-radius: 20px;
+  border: 0.5px;
+}
+
+.box-master a {
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  color: aliceblue;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+}
