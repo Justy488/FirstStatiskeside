@@ -7,17 +7,17 @@
   display: flex;
   justify-content: end;
 }
-
+/* 
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  padding: 5px;
+  padding: 4px;
   gap: 1rem;
-}
+} */
 
 img {
-  width: 220px;
+  width: 300px;
   margin: 0;
 }
 
@@ -27,6 +27,8 @@ img {
   padding: 0;
   text-decoration: none;
   color: black;
+  gap: 30px;
+  margin: 2em;
 }
 
 p {
@@ -35,4 +37,37 @@ p {
 
 .price p {
   gap: 1em;
+}
+
+.img-box {
+  /* width: 100%; */
+  aspect-ratio: 2 / 5;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+}
+
+/* .img-box {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+} */
+
+/* Til at aligne cards ordenligt, dette er en styling */
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+.text-ryk {
+  padding-left: 1em;
 }
