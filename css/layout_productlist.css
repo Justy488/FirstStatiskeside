@@ -1,0 +1,38 @@
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+}
+
+.smallpush {
+  display: flex;
+  justify-content: end;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  padding: 5px;
+  gap: 1rem;
+}
+
+img {
+  width: 220px;
+  margin: 0;
+}
+
+.lukketkasse {
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  padding: 0;
+}
+
+.price p {
+  gap: 1em;
+}
