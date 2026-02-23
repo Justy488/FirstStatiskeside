@@ -7,17 +7,17 @@
   display: flex;
   justify-content: end;
 }
-
+/* 
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
   padding: 4px;
   gap: 1rem;
-}
+} */
 
 img {
-  width: 320px;
+  width: 300px;
   margin: 0;
 }
 
@@ -53,3 +53,21 @@ p {
   height: 100%;
   object-fit: fill;
 } */
+
+/* Til at aligne cards ordenligt, dette er en styling */
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+.text-ryk {
+  padding-left: 1em;
+}

@@ -1,0 +1,44 @@
+/* 1. Grå subtitle tekst */
+.subtitle {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+/* 2. Rød tilbudsprocent */
+.discount-badge {
+  background-color: #e00;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 3px 7px;
+  /* display: inline-block; */
+  border-radius: 2px;
+}
+
+/* 3. Sold Out overlay */
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.img-wrapper img {
+  display: block;
+  width: 100%;
+}
+
+.img-wrapper .sold-out-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.img-wrapper .sold-out-badge {
+  position: absolute;
+  top: 20px; /* position af udsolgt mærket*/
+  left: 20px;
+  background-color: rgba(80, 80, 80, 0.85);
+  color: white;
+  font-size: 0.85rem;
+  padding: 10px 10px;
+}
