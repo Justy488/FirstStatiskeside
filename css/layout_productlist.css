@@ -35,8 +35,14 @@ p {
   padding: 0;
 }
 
+.price {
+  gap: 1em;
+  text-decoration-line: line-through;
+}
+
 .price p {
   gap: 1em;
+  text-decoration-line: line-through;
 }
 
 .img-box {
@@ -70,4 +76,11 @@ article {
 
 .text-ryk {
   padding-left: 1em;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  margin: 2em;
 }
