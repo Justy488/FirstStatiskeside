@@ -54,7 +54,7 @@ p {
   object-fit: fill;
 } */
 
-/* Til at aligne cards ordenligt, dette er en styling */
+/* Til at aligne cards ordenligt, så det står lige, dette er en styling fra undervisningen */
 section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
