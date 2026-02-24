@@ -35,8 +35,14 @@ p {
   padding: 0;
 }
 
+.price {
+  gap: 1em;
+  text-decoration-line: line-through;
+}
+
 .price p {
   gap: 1em;
+  text-decoration-line: line-through;
 }
 
 .img-box {
