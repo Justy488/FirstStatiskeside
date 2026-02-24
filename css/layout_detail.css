@@ -1,0 +1,26 @@
+img {
+  width: 300px;
+  margin: 0;
+}
+.img-box {
+  /* width: 100%; */
+  aspect-ratio: 2 / 5;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+}
+
+/* Til at aligne cards ordenligt, dette er en styling */
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
