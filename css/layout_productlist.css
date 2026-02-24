@@ -77,3 +77,10 @@ article {
 .text-ryk {
   padding-left: 1em;
 }
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  margin: 2em;
+}
