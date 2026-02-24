@@ -18,7 +18,8 @@
 .box-master {
   display: grid;
 
-  background-color: #7a1027;
+  /* background-color: #7a1027; */
+  background: linear-gradient(45deg, #7a1027, #e01d47, #eb7c95);
   border-radius: 15px;
   border: 0.5px;
 }
