@@ -1,26 +1,107 @@
+@font-face {
+  font-family: Kugile;
+  src: url();
+}
+.split article {
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+  grid-row: span 2;
+}
+.smallpush {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1em;
+}
+
 img {
-  width: 300px;
+  width: 400px;
   margin: 0;
 }
 .img-box {
-  /* width: 100%; */
   aspect-ratio: 2 / 5;
   display: grid;
   align-items: center;
   justify-content: center;
-  /* overflow: hidden; */
 }
 
-/* Til at aligne cards ordenligt, dette er en styling */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  font-size: large;
+}
+p {
+  font-size: medium;
+}
+
+.grey-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4rem;
+  padding: 1em;
+}
+
 section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1em;
 }
 
 article {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.mid-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: larger;
+  padding: 1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  gap: 0px;
+  margin: 1em;
+}
+
+.invert {
+  background-color: #d8d8d8;
+  color: #fff;
+  font-size: large;
+  padding: 1em 1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: content-box;
+}
+
+button {
+  font-family: "Courier New", Courier, monospace;
+  color: #222;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  width: auto;
+}
+
+.sale-badge {
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  background-color: rgba(234, 31, 31, 0.85);
+  color: white;
+  font-size: small;
+  padding: 15px 15px;
+}
+
+/* ── FIX 2: Puma brand-section får afstand fra det øverste indhold ── */
+.brand-section {
+  margin-top: 2em;
+}
+
+/* ── FIX 3: brand-info får afstand fra den store h1 i grey-box ── */
+.brand-info {
+  margin-top: 1.2em;
 }
