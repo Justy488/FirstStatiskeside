@@ -8,26 +8,26 @@
   </head>
   <body>
     <main>
-      <section>
-        <div class="split">
-          <a href="index.html"><h1>FashionRUs</h1></a>
+      <div class="split">
+        <a href="index.html"><h1>FashionRUs</h1></a>
+      </div>
 
-          <div class="smallpush">
-            <a href="">Categories</a>
-            <a href="">Brands</a>
-            <a href=""> Seasons</a>
-          </div>
-        </div>
-      </section>
+      <!-- FIX 1: smallpush er nu direkte i main, ikke inde i en section -->
+      <div class="smallpush">
+        <a href="index.html">Home</a>> <a href="">Brands</a>>
+        <a href="">PUMA</a>>
+        <a href=""> Puma Backpack - Limited version (Black)</a>
+      </div>
+
       <section class="product-info">
         <div class="img-wrapper">
           <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/1545.webp"
+            src="https://kea-alt-del.dk/t7/images/webp/640/1584.webp"
             alt=""
           />
           <span class="sale-badge">-17%</span>
         </div>
-        <article>
+        <div class="mid-info">
           <div>
             <h1>Product Information</h1>
             <h2>Model name</h2>
@@ -37,16 +37,30 @@
             <h2>Inventory number</h2>
             <p>116389-6</p>
           </div>
-          <div>
+          <!-- FIX 2: brand-section til at styre mellemrum fra øverste indhold -->
+          <div class="brand-section">
             <h1>Puma</h1>
             <p>Puma, creating experience for today's athlete</p>
           </div>
-        </article>
-        <article>
-          <h1>Puma Backpack - Limited version (Black)</h1>
-          <p>Puma | Bag</p>
+        </div>
+        <article class="invert grey-box">
+          <div>
+            <h1>Puma Backpack - Limited version (Black)</h1>
+            <!-- FIX 3: brand-info giver afstand fra h1 til resten -->
+          </div>
+          <div class="brand-info">
+            <p>Puma | Bag</p>
+          </div>
+          <div>
+            <label for="valg">Choose a size:</label>
 
-          <p>Choose amount <span>1 - 6</span></p>
+            <select id="valg" name="valg">
+              <option value="">-- Sizes --</option>
+              <option value="1">S</option>
+              <option value="2">M</option>
+              <option value="3">L</option>
+            </select>
+          </div>
           <button>Add to Basket</button>
         </article>
       </section>
