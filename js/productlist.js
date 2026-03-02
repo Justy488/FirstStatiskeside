@@ -5,12 +5,13 @@ const productContainer = document.querySelector("section");
 fetch("https://kea-alt-del.dk/t7/api/products")
   .then((response) => response.json())
   .then((data) => {
-    showPruducts(data);
+    showProducts(data);
   });
 
-function showPruducts(productArr) {
+function showProducts(productArr) {
   // console.log("productsArr", productsArr)
   productContainer.innerHTML = "";
+  // forEch = Det bruges til at gentage/loop eller prøve lykken
   productArr.forEach((product) => {
     console.log("product", product.id);
 
@@ -18,19 +19,13 @@ function showPruducts(productArr) {
               <a href="productdetails.html">
                 <div class="img-wrapper">
                   <img
-                    src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp"
+                    src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp"
                     alt=""
                   />
                   <div class="sold-out-overlay"></div>
                   <span class="sold-out-badge">Sold Out</span>
                 </div></a
               >
-              <!-- <a href="https://www.youtube.com/watch?v=HXJx8j7JpKY"
-                ><img
-                  class="img-wrapper"
-                  src="https://kea-alt-del.dk/t7/images/webp/640/1584.webp"
-                  alt=""
-              /></a> -->
               <div class="text-ryk">
                 <h3>White Sweatshirt - Limited version</h3>
                 <div class="subtitle">
@@ -38,9 +33,9 @@ function showPruducts(productArr) {
                   <p>Color: Black / White / Grey</p>
                 </div>
                 <div>
-                  <p>DKK 400,-</p>
+                  <p>${product.price},-</p>
                 </div>
-                <a href="">Read More</a>
+                <a href="productdetails.html?id=${product.id}">Read More</a>
               </div>
             </div>
     `;
