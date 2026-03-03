@@ -5,7 +5,8 @@ const category = params.get("category");
 console.log("CATEGORY", category);
 const productContainer = document.querySelector("section");
 //https://kea-alt-del.dk/t7/api/products?category=Footwear
-fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}`)
+fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=50`)
+// når man skriver. &=50 , så bliver tilføjet 50 nye produkter til product list. og man kan tilføje flere. 
   .then((response) => response.json())
   .then((data) => {
     showProducts(data);
