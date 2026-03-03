@@ -13,7 +13,7 @@ fetch("https://kea-alt-del.dk/t7/api/categories")
   .then((data) => {
     data.forEach((category) => {
       categoryContainer.innerHTML += `<div class="box-master box1">
-            <a href="productlist.html">${category.category}</a>
+            <a href="productlist.html?category=${category.category}">${category.category}</a>
           </div>`;
       // Dette er basicly en "HTML", som jeg skriver ind for at det bliver lagt ind dynamisk.
       // DEt er html template, som defineres. Hvis der ligger et link inde en div med en class,

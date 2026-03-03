@@ -1,8 +1,11 @@
 // "use strict";
+const params = new URLSearchParams(window.location.search);
 
+const category = params.get("category");
+console.log("CATEGORY", category);
 const productContainer = document.querySelector("section");
-
-fetch("https://kea-alt-del.dk/t7/api/products")
+//https://kea-alt-del.dk/t7/api/products?category=Footwear
+fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}`)
   .then((response) => response.json())
   .then((data) => {
     showProducts(data);
@@ -27,7 +30,7 @@ function showProducts(productArr) {
                 </div></a
               >
               <div class="text-ryk">
-                <h3>White Sweatshirt - Limited version</h3>
+                <h3>${product.productdisplayname}</h3>
                 <div class="subtitle">
                   <p> ${product.articletype} | ${product.brandname}</p>
                   <p>Color: Black / White / Grey</p>
