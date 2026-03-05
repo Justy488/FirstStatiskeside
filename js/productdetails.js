@@ -2,13 +2,13 @@ const params = new URLSearchParams(window.location.search);
 // console.log(params);
 const id = params.get("id");
 
-const productContainer = document.querySelector("#productContainer");
+const productBox = document.querySelector("#productBox");
 fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
   .then((response) => response.json())
   .then((data) => {
     // console.log(productdetail);
 
-    productContainer.innerHTML += ` <main id="productContainer">
+    productBox.innerHTML += ` <main id="productBox">
     <div class="split">
     <a href="index.html"><h1>FashionRUs</h1></a>
     </div>
@@ -26,7 +26,9 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
     src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp"
     alt=""
     />
-    <span class="sale-badge">-17%</span>
+                
+      ${data.discount ? `<span class='sale-badge no-discount'> ${data.discount} %</span>` : ""}
+      ${data.soldout ? "<div class='sold-out-overlay'></div><span class='sold-out-badge'>Sold Out</span>" : ""}
     </div>
     <div class="mid-info">
     <div>
@@ -40,23 +42,23 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
     </div>
     
     <div class="brand-section">
-    <h1>Puma</h1>
-    <p>Puma, creating experience for today's athlete</p>
+    <h1>${data.brandname} </h1>
+    <p>${data.productdisplayname}</p>
     </div>
     </div>
     <article class="invert grey-box">
           <div>
-          <h1>Puma Backpack - Limited version (Black)</h1>
+          <h1>${data.productdisplayname}</h1>
           
           </div>
           <div class="brand-info">
-          <p>Puma | Bag</p>
+          <p>${data.usagetype} | ${data.subcategory} </p>
           </div>
           <div class="dropdown">
           <label for="valg">Choose a size:</label>
           
           <select id="valg" name="valg">
-          <option value="">-- Clothing Sizes --</option>
+          <option value="">Clothing Sizes </option>
           <option value="1">S</option>
           <option value="2">M</option>
           <option value="3">L</option>

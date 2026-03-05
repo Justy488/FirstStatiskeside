@@ -7,6 +7,11 @@
   src: url();
 }
 
+.logo h1 {
+  color: #fff;
+  text-decoration: none;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
@@ -22,6 +27,7 @@
   background: linear-gradient(45deg, #7a1027, #e01d47, #eb7c95);
   border-radius: 15px;
   border: 0.5px;
+  padding: 2em;
 }
 
 .box-master a {
@@ -33,10 +39,76 @@
 .split {
   display: grid;
   grid-template-columns: repeat(2, 4fr);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
 }
 
 .smallpush {
   display: flex;
   justify-content: end;
+  gap: 1.5em;
+  align-items: center;
 }
 
+.smallpush a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Padding KUN på category knapperne */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  padding: 1em; /* ← kun her */
+  gap: 1rem;
+}
+
+video.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: -3;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -2;
+}
+img {
+  display: block;
+  margin: 0 auto 2em; /* tilføjet til auto setting, så billede ikke går ud over fældt. */
+  max-width: fit-content;
+  max-width: 100%;
+  height: auto;
+  border-radius: 2em;
+}
+
+.bg-box {
+  height: auto;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 1em;
+  color: #fff;
+  margin-top: 40vh;
+  max-width: 800px;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}

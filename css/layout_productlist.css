@@ -64,17 +64,33 @@ p {
 section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto auto auto auto;
+
   gap: 1rem;
   padding: 1rem;
+}
+.smallProduct {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  align-self: end; /* skubber til bunden af sin celle */
 }
 
 article {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
+  grid-row: span 4;
+}
+article button {
+  align-self: end; /* skubber til bunden af sin celle */
 }
 
 .text-ryk {
+  display: grid;
+
+  padding-left: 0.8em;
+}
+.pris-ryk {
   padding-left: 1em;
 }
 
