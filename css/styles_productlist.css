@@ -5,15 +5,15 @@
 }
 
 /* 2. Rød tilbudsprocent */
-.discount-badge {
+/* .discount-badge {
   background-color: #e00;
   color: white;
   font-size: 0.8rem;
   font-weight: bold;
-  padding: 3px 7px;
-  /* display: inline-block; */
-  border-radius: 2px;
-}
+  padding: 3px 7px; */
+/* display: inline-block; */
+/* border-radius: 2px;
+} */
 
 /* 3. Sold Out overlay */
 .img-wrapper {
@@ -45,11 +45,6 @@
   opacity: 0.4;
 } */
 
-
-
-
-
-
 .img-wrapper .sold-out-badge {
   position: absolute;
   top: 20px; /* position af udsolgt mærket*/
@@ -62,10 +57,18 @@
 
 .sale-badge {
   position: absolute;
-  top: 10px; /* position af udsolgt mærket*/
-  left: 10px;
+  top: 20px; /* position af udsolgt mærket*/
+  left: 20px;
   background-color: rgba(234, 31, 31, 0.85);
   color: white;
   font-size: 0.85rem;
-  padding: 10px 10px;
+  padding: 20px 20px;
+  padding: 6px 7px;
 }
+/* .no-discount {
+  display: none;
+}
+
+.discount .no-discount {
+  display: block;
+} */
