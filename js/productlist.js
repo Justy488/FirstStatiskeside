@@ -11,6 +11,13 @@ fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=50`)
   .then((data) => {
     showProducts(data);
   });
+document.querySelector(".asc").addEventListener("click",kliksorter);
+document.querySelector(".desc").addEventListener("click", kliksorter);
+
+function kliksorter(evt) {
+  console.log("KLIK SORTER EVT",evt)
+}
+
 
 function showProducts(productArr) {
   // console.log("productsArr", productsArr)
